@@ -1,5 +1,5 @@
 {% set name = "imaxt-multiscale-plugin" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imaxt-multiscale-plugin-{{ version }}.tar.gz
-  sha256: c3f58ee789bf35f0b571a77eada94a47922654b677dd264d58a2fab4dd130ef7
+  sha256: 56cd7039425656c82925f9016c3eefe5e17f73244d19177d2127c23bf23ba2c9
 
 build:
   noarch: python
