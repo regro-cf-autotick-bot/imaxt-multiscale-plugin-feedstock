@@ -1,5 +1,5 @@
 {% set name = "imaxt-multiscale-plugin" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imaxt-multiscale-plugin-{{ version }}.tar.gz
-  sha256: e3ba818ad9d665f3a2a1999b01772137675046a7afd4faf5fc255ca064e883e8
+  sha256: 56cd7039425656c82925f9016c3eefe5e17f73244d19177d2127c23bf23ba2c9
 
 build:
   noarch: python
@@ -28,8 +28,12 @@ requirements:
     - numpy
     - python >=3.8
     - qtpy
+    - s3fs
     - xarray
     - zarr
+
+
+
 
 test:
   imports:
