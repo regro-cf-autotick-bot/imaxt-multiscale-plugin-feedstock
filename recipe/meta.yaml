@@ -1,5 +1,5 @@
 {% set name = "imaxt-multiscale-plugin" %}
-{% set version = "0.3.0" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imaxt-multiscale-plugin-{{ version }}.tar.gz
-  sha256: f544a5a2978ef9b2c6c01aa5c978bb80854a3c47b24f9ddb426033028fe460ad
+  sha256: e3ba818ad9d665f3a2a1999b01772137675046a7afd4faf5fc255ca064e883e8
 
 build:
   noarch: python
@@ -20,14 +20,16 @@ requirements:
     - python >=3.8
     - setuptools
   run:
+    - astropy
     - dask-core
+    - imageio
     - imaxt-image
-    - magicgui
     - napari
     - numpy
     - python >=3.8
     - qtpy
     - xarray
+    - zarr
 
 test:
   imports:
