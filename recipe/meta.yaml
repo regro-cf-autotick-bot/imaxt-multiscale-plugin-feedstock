@@ -28,8 +28,12 @@ requirements:
     - numpy
     - python >=3.8
     - qtpy
+    - s3fs
     - xarray
     - zarr
+
+
+
 
 test:
   imports:
