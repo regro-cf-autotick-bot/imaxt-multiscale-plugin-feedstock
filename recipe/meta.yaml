@@ -20,14 +20,16 @@ requirements:
     - python >=3.8
     - setuptools
   run:
+    - astropy
     - dask-core
+    - imageio
     - imaxt-image
-    - magicgui
     - napari
     - numpy
     - python >=3.8
     - qtpy
     - xarray
+    - zarr
 
 test:
   imports:
