@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -20,7 +20,7 @@ requirements:
     - python >=3.8
     - setuptools
   run:
-    - astropy
+    - astropy-base
     - dask-core
     - imageio
     - imaxt-image
