@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imaxt-multiscale-plugin-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/imaxt-multiscale-plugin-{{ version }}.tar.gz
   sha256: 56cd7039425656c82925f9016c3eefe5e17f73244d19177d2127c23bf23ba2c9
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
     - astropy
@@ -26,7 +26,7 @@ requirements:
     - imaxt-image
     - napari
     - numpy
-    - python >=3.8
+    - python >={{ python_min }}
     - qtpy
     - s3fs
     - xarray
@@ -44,6 +44,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://gitlab.developers.cam.ac.uk/astronomy/camcead/imaxt/imaxt-multiscale-plugin
